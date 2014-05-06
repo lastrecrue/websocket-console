@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" ng-app="YOUR_APP">
+<head>
+<meta charset="utf-8">
+<title>My HTML File</title>
+
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/app.css" />
+<script src="js/angular.min.js"></script>
+<script src="js/angular-websocket.js"></script>
+<script src="js/script.js"></script>
+<!--[if lte IE 8]>
+        <script>
+          document.createElement('ng-include');
+          document.createElement('ng-pluralize');
+          document.createElement('ng-view');
+
+          // Optionally these for CSS
+          document.createElement('ng:include');
+          document.createElement('ng:pluralize');
+          document.createElement('ng:view');
+        </script>
+      <![endif]-->
+</head>
+<body ng-controller="MainCtrl">
+
+	<p>{{scrambledWord}}</p>
+	<input type="text" name="unScrambledWord" ng-model="unScrambledWord" required>
+	<button ng-click="doClick()">Send</button>
+
+</body>
+</html>
